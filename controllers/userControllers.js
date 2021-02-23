@@ -9,12 +9,11 @@ const sendEmail = async (newUser) => {
     let testAccount = await nodemailer.createTestAccount();
 
     let transporter = nodemailer.createTransport({
-      host: "smtp.ethereal.email",
-      port: 587,
-      secure: false, // true for 465, false for other ports
+      host: "smtp.mailtrap.io",
+      port: 2525,
       auth: {
-        user: testAccount.user, // generated ethereal user
-        pass: testAccount.pass, // generated ethereal password
+        user: "5223c537c5492f",
+        pass: "71024214e85462",
       },
     });
 
